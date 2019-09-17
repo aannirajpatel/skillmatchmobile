@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aanpatel.skillmatch3.DashboardActivity"
+    android:background="@drawable/smback"
+    >
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/searchBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Search for people by skills"
+            android:inputType="textPersonName"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="search"
+            android:text="SEARCH" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/searchLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Welcome, Aan"
+        android:textColor="#000000"
+        android:background="@drawable/welcome_box_style"
+        android:padding="10dp"
+        android:textSize="18sp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/welcomeText"
+        android:rowCount="3"
+        android:columnCount="2"
+        android:layout_marginTop="20dp"
+        >
+
+        <Button
+            android:id="@+id/viewSkillsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:onClick="showSkills"
+            android:text="View Profile" />
+
+        <Button
+            android:id="@+id/editSkillsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:onClick="editSkills"
+            android:text="UPDATE SKILL INFO" />
+
+        <Button
+            android:id="@+id/editProfileBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:onClick="editProfile"
+            android:text="Update contact info" />
+
+        <Button
+            android:id="@+id/acquaintancesBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:onClick="acquaintances"
+            android:text="Your Acquaintances" />
+
+        <Button
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="0"
+            android:layout_columnWeight="1"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_row="2"
+            android:onClick="logout"
+            android:text="Logout" />
+    </GridLayout>
+
+
+
+</RelativeLayout>
